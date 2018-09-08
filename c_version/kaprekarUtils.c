@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<math.h>
 
-#include "kaprekarUtils.h"
+#include<kaprekarUtils.h>
 
 /**
  * <p>This function tests whether the given input <code>n</code>
