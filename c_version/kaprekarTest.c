@@ -23,16 +23,16 @@ int main(int argc, char **argv) {
   int kaprekarNumbers[] = {1, 9, 45, 55, 99, 297, 703, 999, 2223, 2728, 4879, 4950, 5050, 5292, 7272, 7777, 9999, 17344, 22222, 38962, 77778, 82656, 95121, 99999};
 
   int numCorrect = 0;
-  int numWrong   = 0;
+  int numWrong = 0;
   int i;
 
   for(i = -10; i <= 100000; i++) {
-    if(contains(kaprekarNumbers, numKaprekarNumbers, i) != isKaprekar(i)) {
+    if(contains(kaprekarNumbers, numKaprekarNumbers, i) && != isKaprekar(i)) {
       numWrong++;
       if(contains(kaprekarNumbers, numKaprekarNumbers, i)) {
-	printf(stderr, "i = %d: is a known Kaprekar number, but the method returned false\n", i);
+	       printf(stderr, "i = %d: is a known Kaprekar number, but the method returned false\n", i);
       } else {
-	printf(stderr, "i = %d: is known NOT to be a Kaprekar number, but the method returned true\n", i);
+	       printf(stderr, "i = %d: is known NOT to be a Kaprekar number, but the method returned true\n", i);
       }
     } else {
       numCorrect++;
@@ -43,7 +43,6 @@ int main(int argc, char **argv) {
   double percentCorrect = (double) numCorrect / (numCorrect + numWrong) * 100.0;
   printf("Percentage Test Cases passed: %.2f\n", percentCorrect);
 
-  return 0;
 }
 
 static int contains(int arr[], int n, int key) {
